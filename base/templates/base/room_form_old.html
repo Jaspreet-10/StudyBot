@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div>
+       <form method="POST" action="">
+           {% csrf_token %} <!--we send this token in every form submit(whenever we send POST request) code because just to make sure that there is no malicious attempts-->
+            {{form.as_p}} <!--This command set the form in the format or I can say in vertical manner-->
+           <input type="submit" value="submit" />
+       </form> 
+    </div>
+
+
+{% endblock content %}
